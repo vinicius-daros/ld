@@ -1,7 +1,10 @@
 module top(
-	input [3:0] sw, 
-	output [3:0] led);
+	input [3:0] SW, 
+	output [3:0] LEDR);
 
-	assign led = sw;
-	//assign led[0] = ~sw[0];
+	// assign LEDR = SW;
+	assign LEDR[0] = ~SW[0];
+	assign LEDR[1] = ~SW[2] && SW[1];
+	assign LEDR[2] = LEDR[1] | LEDR[3];
+	assign LEDR[3] = SW[3] && SW[2] ;
 endmodule
