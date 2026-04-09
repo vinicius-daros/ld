@@ -10,6 +10,7 @@ module mux3e (
     input x1, x2, x3, s0, s1,
     output f);
     // Instancie e conecte os componentes abaixo  
+    assign f = (s1 == 1) ? x1 : ((s0 == 1) ? x2 : x3);
 
 endmodule
 
