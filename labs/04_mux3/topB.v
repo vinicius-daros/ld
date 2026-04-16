@@ -12,6 +12,9 @@ module mux3e (
     // Instancie e conecte os componentes abaixo  
     wire fio;
     
+    mux2 muxA(.f(fio).s(s0).x1(x3).x2(x2));
+    
+    mux2 muxB(.f(f).s(s1).x1(fio).x2(x1))
 endmodule
 
 // Funcional
